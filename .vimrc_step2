@@ -1,31 +1,3 @@
-set encoding=UTF-8
-
-call plug#begin()
-
-" Syntax "
-Plug 'sheerun/vim-polyglot'
-
-" Status bar "
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Themes "
-Plug 'morhetz/gruvbox' 
-
-" Tree "
-Plug 'preservim/NERDTree'  
-
-" tmux "
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-
-" Typing "
-Plug 'jiangmiao/auto-pairs'  
-
-" Vim icons"
-Plug 'ryanoasis/vim-devicons'
-
-call plug#end()
 
 " Vim Icons"
 let g:webdevicons_enable_nerdtree = 1
@@ -64,3 +36,6 @@ set t_Co=256
 :set mouse=a
 ":set title "                    " change the terminals title "
 "set wildignore=*.swp,*.bak,*.pyc,*.class "
+
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
