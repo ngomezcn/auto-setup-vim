@@ -52,7 +52,7 @@ throw_error()
 
 succes_downloaded()
 {
-   printf "${GREEN}\nSuccessfully downloaded $1\n${NC}"    
+   printf "${GREEN} ↳ Successfully downloaded $1\n${NC}"    
 }
 
 
@@ -68,12 +68,12 @@ rm -r .ins_temp/YouCompleteMe/
 set -e # If something goes wrong exit
 
 # Install essential tools
-#blue_printf "\nInstalling essentials tools..."
-#apt --yes install vim  
-#apt --yes install git  
-#apt --yes install tmux # Multiplexor terminal
-#apt --yes install curl 
-#apt --yes install wget 
+blue_printf "\nInstalling essentials tools..."
+apt --yes install vim  
+apt --yes install git  
+apt --yes install tmux # Multiplexor terminal
+apt --yes install curl 
+apt --yes install wget 
 
 # Ask for Settings
 blue_printf "\n Set installation settings:"
@@ -140,7 +140,6 @@ rm -rf .ins_temp/YouCompleteMe
 succes_installed "zzzz"
 
 
-
 chown -R ubuntu $home_dir.vim/
 chgrp -R ubuntu $home_dir.vim/
 
@@ -159,7 +158,6 @@ cp -r conf_files/vim/.plug-config/ $home_dir.vim/
 cp conf_files/tmux/.tmux.conf $home_dir
 succes_installed "Vim custom configurations"
 
-
 # Set user as owner
 chown -R $user $home_dir.vimrc
 chgrp -R $user $home_dir.vimrc
@@ -172,7 +170,5 @@ chgrp -R ubuntu $home_dir.vim/
 
 chown -R ubuntu $home_dir.bashrc
 chgrp -R ubuntu $home_dir.bashrc
-
-#printf "${GREEN}\nOpen vim and run :PlugInstall and :PluginInstall (once done exit)${NC}"
 
 
